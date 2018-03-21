@@ -88,10 +88,10 @@ namespace Telemachus
         static public float powerConsumption = 0f;
 
         [KSPField]
-        public float powerConsumptionIncrease = 0.02f;
+        public float powerConsumptionIncrease = 0.001f;
 
         [KSPField]
-        public float powerConsumptionBase = 0.02f;
+        public float powerConsumptionBase = 0.001f;
 
         [KSPField(guiActive = true, guiName = "Data Link Status")]
         string statusString = "Disabled";
