@@ -49,9 +49,9 @@ namespace Telemachus.CameraSnapshots
             }
         }
         
-        protected const float fovAngle = 60f;
+        protected const float fovAngle = 70f;
         protected const float aspect = 1.0f;
-        public  int cameraResolution = 256;
+        public  int cameraResolution = 200;
 
         protected void OnEnable()
         {
@@ -74,7 +74,7 @@ namespace Telemachus.CameraSnapshots
             {
                 mutex = true;
                 duplicateAnyNewCameras();
-                repositionCamera();
+                //repositionCamera();
                 StartCoroutine(newRender());
             }
         }
@@ -89,6 +89,7 @@ namespace Telemachus.CameraSnapshots
             {
                 yield return new WaitForEndOfFrame();
                 //camera.targetTexture = rt;
+                repositionCamera();
                 camera.Render();
             }
 
