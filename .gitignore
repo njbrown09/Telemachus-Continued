@@ -4,6 +4,7 @@ Telemachus.wiki
 publish
 images
 *.v11.suo
+.vs
 Leaflet.KSP
 ksp-telemachus-dev
 Telemachus.v12.suo

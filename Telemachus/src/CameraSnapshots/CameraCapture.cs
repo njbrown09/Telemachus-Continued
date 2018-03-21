@@ -51,7 +51,7 @@ namespace Telemachus.CameraSnapshots
         
         protected const float fovAngle = 60f;
         protected const float aspect = 1.0f;
-        public  int cameraResolution = 300;
+        public  int cameraResolution = 256;
 
         protected void OnEnable()
         {
@@ -87,14 +87,19 @@ namespace Telemachus.CameraSnapshots
 
             foreach (Camera camera in cameraDuplicates.Values)
             {
+                yield return new WaitForEndOfFrame();
                 //camera.targetTexture = rt;
                 camera.Render();
             }
 
-                //imageStopWatch.Start();
+            //imageStopWatch.Start();
+            yield return new WaitForEndOfFrame();
             Texture2D texture = getTexture2DFromRenderTexture();
+            yield return new WaitForEndOfFrame();
             this.imageBytes = texture.EncodeToJPG();
+            yield return new WaitForEndOfFrame();
             this.didRender = true;
+            yield return new WaitForEndOfFrame();
             Destroy(texture);
             //imageStopWatch.Stop();
             //PluginLogger.debug(cameraManagerName() + ": TIME TO RENDER: " + imageStopWatch.Elapsed + " : " + DateTime.Now.ToString("hh.mm.ss.ffffff"));
@@ -103,7 +108,7 @@ namespace Telemachus.CameraSnapshots
 
             //wait a second before releasing the mutex to improve performance
             //PluginLogger.debug("RENDER DELAY:" + (1.0f + (.3f * renderOffsetFactor)));
-            yield return new WaitForSeconds(1.0f + (.3f * renderOffsetFactor));
+            yield return new WaitForSeconds(0.33f);
             mutex = false;
         }
 
