@@ -1,10 +1,9 @@
-Readme
+Telemachus Continued
 =
-
-[Building](https://github.com/richardbunt/Telemachus/wiki/Building)
 
 [KSP Forum Thread](http://forum.kerbalspaceprogram.com/index.php?/topic/144482-113-2016-07-24-telemachus-telemetry-and-flight-control-in-the-web-browser/)
 
-[Installation](https://github.com/richardbunt/Telemachus/wiki/Installation)
+# Map Fix
+Due to licensing issues, i cannot include the file to fix the maps. Dont worry though, it is super easy to do.
 
-[User Guide](https://github.com/richardbunt/Telemachus/wiki/User-Guide)
+Replace the entire contents of \GameData\TelemachusContinued\Plugins\PluginData\Telemachus\leafletksp.js with [this](http://antisol.org/leafletksp.js)
