@@ -13,7 +13,7 @@ namespace Telemachus
     {
         #region Fields
 
-        [KSPEvent(guiActive = true, guiName = "Open Link")]
+        [KSPEvent(guiActive = true, guiName = "Open Telemetry Link")]
         public void openBrowser()
         {
             try
