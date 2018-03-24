@@ -187,6 +187,10 @@
     "Map": {
       series: ["v.long", "v.lat", "v.name", "v.body"],
       type: "map"
+    },
+    "Camera": {
+      series: ["v.long", "v.lat", "v.name", "v.body"],
+      type: "cam"
     }
   };
 
@@ -1286,7 +1290,12 @@
           }
         }
       });
-    } else {
+    }
+    else if (chart.type === "cam") {
+      $cam = $('<iframe src="/telemachus/CameraTest.html" frameborder="0" height="100%" weight="400%" align="center" scrolling="no"></iframe>').appendTo($display);
+      cam = '<iframe src="/telemachus/CameraTest.html">'
+    } 
+    else {
       apis = chart.series;
       chart = new Chart($display[0], (function() {
         var _i, _len, _results;

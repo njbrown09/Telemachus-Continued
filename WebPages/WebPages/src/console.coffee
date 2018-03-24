@@ -62,7 +62,9 @@ standardCharts =
   "Map":
     series: ["v.long", "v.lat", "v.name", "v.body"]
     type: "map"
-
+  "Camera":
+    series: ["v.long", "v.lat", "v.name", "v.body"]
+    type: "cam"
 testCharts =
   "Sine and Cosine":
     series: ["test.sin", "test.cos"]
