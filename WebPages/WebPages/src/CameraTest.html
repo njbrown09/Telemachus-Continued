@@ -1,0 +1,262 @@
+<html>
+<head>
+<script type="text/JavaScript">
+var url = "http://" + location.hostname+(location.port ? ':'+location.port: '') + "/telemachus/cameras/RPMCamera-ExtCam"; //url to load image from
+var refreshInterval = 200; //in ms
+var drawDate = true; //draw date string
+var img1;
+var img2;
+var img3;
+var img4;
+var img5;
+var img6;
+var img7;
+var img8;
+
+
+function init1() {
+    var canvas = document.getElementById("canvas1");
+    var context = canvas.getContext("2d");
+    img1 = new Image();
+    img1.onload = function() {
+        canvas.setAttribute("width", img1.width)
+        canvas.setAttribute("height", img1.height)
+        context.drawImage(this, 0, 0);
+        if(drawDate) {
+            var now = new Date();
+            var text = now.toLocaleDateString() + " " + now.toLocaleTimeString();
+            var maxWidth = 100;
+            var x = img1.width-10-maxWidth;
+            var y = img1.height-10;
+            context.strokeStyle = 'black';
+            context.lineWidth = 2;
+            context.strokeText(text, x, y, maxWidth);
+            context.fillStyle = 'white';
+            context.fillText(text, x, y, maxWidth);
+        }
+    };
+}
+function init2() {
+    var canvas = document.getElementById("canvas2");
+    var context = canvas.getContext("2d");
+    img2 = new Image();
+    img2.onload = function() {
+        canvas.setAttribute("width", img2.width)
+        canvas.setAttribute("height", img2.height)
+        context.drawImage(this, 0, 0);
+        if(drawDate) {
+            var now = new Date();
+            var text = now.toLocaleDateString() + " " + now.toLocaleTimeString();
+            var maxWidth = 100;
+            var x = img2.width-10-maxWidth;
+            var y = img2.height-10;
+            context.strokeStyle = 'black';
+            context.lineWidth = 2;
+            context.strokeText(text, x, y, maxWidth);
+            context.fillStyle = 'white';
+            context.fillText(text, x, y, maxWidth);
+        }
+    };
+}
+function init3() {
+    var canvas = document.getElementById("canvas3");
+    var context = canvas.getContext("2d");
+    img3 = new Image();
+    img3.onload = function() {
+        canvas.setAttribute("width", img3.width)
+        canvas.setAttribute("height", img3.height)
+        context.drawImage(this, 0, 0);
+        if(drawDate) {
+            var now = new Date();
+            var text = now.toLocaleDateString() + " " + now.toLocaleTimeString();
+            var maxWidth = 100;
+            var x = img3.width-10-maxWidth;
+            var y = img3.height-10;
+            context.strokeStyle = 'black';
+            context.lineWidth = 2;
+            context.strokeText(text, x, y, maxWidth);
+            context.fillStyle = 'white';
+            context.fillText(text, x, y, maxWidth);
+        }
+    };
+}
+function init4() {
+    var canvas = document.getElementById("canvas4");
+    var context = canvas.getContext("2d");
+    img4 = new Image();
+    img4.onload = function() {
+        canvas.setAttribute("width", img4.width)
+        canvas.setAttribute("height", img4.height)
+        context.drawImage(this, 0, 0);
+        if(drawDate) {
+            var now = new Date();
+            var text = now.toLocaleDateString() + " " + now.toLocaleTimeString();
+            var maxWidth = 100;
+            var x = img4.width-10-maxWidth;
+            var y = img4.height-10;
+            context.strokeStyle = 'black';
+            context.lineWidth = 2;
+            context.strokeText(text, x, y, maxWidth);
+            context.fillStyle = 'white';
+            context.fillText(text, x, y, maxWidth);
+        }
+    };
+}
+function init5() {
+    var canvas = document.getElementById("canvas5");
+    var context = canvas.getContext("2d");
+    img5 = new Image();
+    img5.onload = function() {
+        canvas.setAttribute("width", img5.width)
+        canvas.setAttribute("height", img5.height)
+        context.drawImage(this, 0, 0);
+        if(drawDate) {
+            var now = new Date();
+            var text = now.toLocaleDateString() + " " + now.toLocaleTimeString();
+            var maxWidth = 100;
+            var x = img5.width-10-maxWidth;
+            var y = img5.height-10;
+            context.strokeStyle = 'black';
+            context.lineWidth = 2;
+            context.strokeText(text, x, y, maxWidth);
+            context.fillStyle = 'white';
+            context.fillText(text, x, y, maxWidth);
+        }
+    };
+}
+function init6() {
+    var canvas = document.getElementById("canvas6");
+    var context = canvas.getContext("2d");
+    img6 = new Image();
+    img6.onload = function() {
+        canvas.setAttribute("width", img6.width)
+        canvas.setAttribute("height", img6.height)
+        context.drawImage(this, 0, 0);
+        if(drawDate) {
+            var now = new Date();
+            var text = now.toLocaleDateString() + " " + now.toLocaleTimeString();
+            var maxWidth = 100;
+            var x = img6.width-10-maxWidth;
+            var y = img6.height-10;
+            context.strokeStyle = 'black';
+            context.lineWidth = 2;
+            context.strokeText(text, x, y, maxWidth);
+            context.fillStyle = 'white';
+            context.fillText(text, x, y, maxWidth);
+        }
+    };
+}
+function init7() {
+    var canvas = document.getElementById("canvas7");
+    var context = canvas.getContext("2d");
+    img7 = new Image();
+    img7.onload = function() {
+        canvas.setAttribute("width", img7.width)
+        canvas.setAttribute("height", img7.height)
+        context.drawImage(this, 0, 0);
+        if(drawDate) {
+            var now = new Date();
+            var text = now.toLocaleDateString() + " " + now.toLocaleTimeString();
+            var maxWidth = 100;
+            var x = img7.width-10-maxWidth;
+            var y = img7.height-10;
+            context.strokeStyle = 'black';
+            context.lineWidth = 2;
+            context.strokeText(text, x, y, maxWidth);
+            context.fillStyle = 'white';
+            context.fillText(text, x, y, maxWidth);
+        }
+    };
+}
+function init8() {
+    var canvas = document.getElementById("canvas8");
+    var context = canvas.getContext("2d");
+    img8 = new Image();
+    img8.onload = function() {
+        canvas.setAttribute("width", img8.width)
+        canvas.setAttribute("height", img8.height)
+        context.drawImage(this, 0, 0);
+        if(drawDate) {
+            var now = new Date();
+            var text = now.toLocaleDateString() + " " + now.toLocaleTimeString();
+            var maxWidth = 100;
+            var x = img8.width-10-maxWidth;
+            var y = img8.height-10;
+            context.strokeStyle = 'black';
+            context.lineWidth = 2;
+            context.strokeText(text, x, y, maxWidth);
+            context.fillStyle = 'white';
+            context.fillText(text, x, y, maxWidth);
+        }
+    };
+}
+
+
+function refresh()
+{
+	for (var i = 1;  i < 9; i++) {
+		if (i == 1)
+		{
+			img1.src = url + i + "?t=" + new Date().getTime();
+		}
+		if (i == 2)
+		{
+			img2.src = url + i + "?t=" + new Date().getTime();
+		}
+		if (i == 3)
+		{
+			img3.src = url + i + "?t=" + new Date().getTime();
+		}
+		if (i == 4)
+		{
+			img4.src = url + i + "?t=" + new Date().getTime();
+		}
+		if (i == 5)
+		{
+			img5.src = url + i + "?t=" + new Date().getTime();
+		}
+		if (i == 6)
+		{
+			img6.src = url + i + "?t=" + new Date().getTime();
+		}
+		if (i == 7)
+		{
+			img7.src = url + i + "?t=" + new Date().getTime();
+		}
+		if (i == 8)
+		{
+			img8.src = url + i + "?t=" + new Date().getTime();
+		}
+		console.log(i);
+	}
+	setTimeout("refresh()",refreshInterval);
+}
+
+function start()
+{
+	init1();
+	init2();
+	init3();
+	init4();
+	init5();
+	init6();
+	init7();
+	init8();
+	refresh();
+}
+
+</script>
+<title>Telemachus - Cameras</title>
+</head>
+
+<body onload="JavaScript:start();">
+<canvas id="canvas1"></canvas>
+<canvas id="canvas2"></canvas>
+<canvas id="canvas3"></canvas>
+<canvas id="canvas4"></canvas>
+<canvas id="canvas5"></canvas>
+<canvas id="canvas6"></canvas>
+<canvas id="canvas7"></canvas>
+<canvas id="canvas8"></canvas>
+</body>
+</html>
